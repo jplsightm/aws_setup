@@ -26,3 +26,7 @@ sudo apt-get update
 sudo apt-get install docker-ce -y
 # Test it:
 # sudo docker run hello-world
+
+# Getting pip working
+pip install --upgrade pip
+pip install docker-compose
