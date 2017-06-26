@@ -16,7 +16,7 @@ _path = '/var/notebooks'
 _user = 'parallels'
 _group = 'parallels'
 
-if not path.isdir(_path):i
+if not path.isdir(_path):
     print '{} does not exist. Creating it'.format(_path)
     os.makedirs(_path)
 
