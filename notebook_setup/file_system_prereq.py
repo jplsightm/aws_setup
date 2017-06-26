@@ -19,11 +19,12 @@ _group = 'parallels'
 if not path.isdir(_path):
     print '{} does not exist. Creating it'.format(_path)
     os.makedirs(_path)
+else:
+    print '{} exists'.format(_path)
 
 stat_info = os.stat(_path)
 uid = stat_info.st_uid
 gid = stat_info.st_gid
-print uid, gid
 
 user = pwd.getpwuid(uid)[0]
 group = grp.getgrgid(gid)[0]
@@ -33,3 +34,5 @@ if user == 'root' or group in ['root', 'wheel']:
     uid = pwd.getpwnami(_user).pw_uid
     gid = grp.getgrnam(_group).gr_gid
     os.chown(_path, uid, gid)
+else:
+    print 'permissions look good'
