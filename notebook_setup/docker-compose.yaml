@@ -1,0 +1,9 @@
+version: '2'
+services:
+  notebook:
+    image: "jupyter/scipy-notebook"
+    ports: 
+      - 8888:8888
+    command: start-notebook.sh --NotebookApp.ip='0.0.0.0'
+    volumes:
+      - /var/notebooks:/home/jovyan/work
