@@ -28,7 +28,7 @@ print uid, gid
 user = pwd.getpwuid(uid)[0]
 group = grp.getgrgid(gid)[0]
 
-if user == 'root' or group in ['root', 'wheel']:i
+if user == 'root' or group in ['root', 'wheel']:
     print 'user or group of {} is owned by a highly privilaged account. modifying to {}:{}'.format(_path, _user, _group)
     uid = pwd.getpwnami(_user).pw_uid
     gid = grp.getgrnam(_group).gr_gid
