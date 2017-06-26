@@ -30,3 +30,9 @@ sudo apt-get install docker-ce -y
 # Getting pip working
 pip install --upgrade pip
 pip install docker-compose
+
+# Arguably this is already done :)
+sudo mkdir /opt/yetijoe
+sudo chown -R $1:$1 /opt/yetijoe
+cd /opt/yetijoe
+git clone git@github.com:yetijoe/aws_setup.git
