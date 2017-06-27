@@ -6,4 +6,6 @@ services:
       - 8888:8888
     command: start-notebook.sh --NotebookApp.ip='0.0.0.0'
     volumes:
-      - /var/notebooks:/home/jovyan/work
+      - notebook-vol:/home/jovyan/work
+volumes:
+  notebook-vol
