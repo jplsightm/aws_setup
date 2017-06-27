@@ -8,4 +8,4 @@ services:
     volumes:
       - notebook-vol:/home/jovyan/work
 volumes:
-  notebook-vol
+  notebook-vol:
